@@ -1,0 +1,49 @@
+.section-portfolio {
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  background-color: #f4f8f9;
+  z-index: -2;
+
+  .bottom-line::after {
+    bottom: 18px;
+    z-index: -1;
+  }
+
+  .title {
+    z-index: 1;
+    margin-bottom: 60px;
+  }
+}
+
+.section-portfolio__nav {
+  margin-bottom: 50px;
+  display: flex;
+
+  a {
+    font-size: 28px;
+    font-weight: 800;
+    color: #8fa5ae;
+    transition: 0.3s;
+  }
+
+  a:not(:first-child) {
+    font-weight: 900;
+  }
+
+  a:not(:last-child) {
+    margin-right: 84px;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: #000;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
