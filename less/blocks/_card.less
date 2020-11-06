@@ -1,5 +1,4 @@
 .card {
-  margin-bottom: 60px;
   position: relative;
 
   cursor: pointer;
@@ -9,20 +8,103 @@
     color: #000;
   }
 
-  &:hover {
-    filter: opacity(0.7);
+  &:nth-child(even) .card__title::after {
+    right: 0;
+    left: unset;
+  }
+
+  &:hover .card__img img,
+  &:active .card__img img {
+    filter: blur(3px);
+  }
+
+  &:hover .card__title::after,
+  &:active .card__title::after {
+    width: 100%;
+  }
+
+  &:hover .card__button-big,
+  &:hover .card__button-small {
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  &:hover .card__title,
+  &:active .card__title {
+    transition: 0.3s;
+    color: #ed574f;
   }
 }
 
+.card-big {
+  margin-bottom: 60px;
+  max-width: 555px;
+  width: 49%;
+}
+
+.card-small {
+  max-width: 360px;
+  width: 32%;
+}
+
 .card__img {
+  position: relative;
   margin-bottom: 30px;
+
+  a {
+    color: var(--red);
+  }
+
+  img {
+    transition: 0.5s;
+  }
+}
+
+.card__button-big,
+.card__button-small {
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+
+  &:hover {
+    background-color: var(--red);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #d4423b;
+    color: #fff;
+  }
+}
+
+.card__button-big {
+  top: 43%;
+  left: 26%;
+}
+
+.card__button-small {
+  top: 38%;
+  left: 13%;
 }
 
 .card__title {
+  display: inline-block;
   margin-bottom: 10px;
+  position: relative;
 
   font-size: 32px;
   font-weight: 700;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ed574f;
+    transition: 0.4s;
+  }
 }
 
 .card__subtitle {

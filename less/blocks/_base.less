@@ -22,8 +22,12 @@ body {
   padding: 0;
   width: 100%;
 
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "MPLUS 1p", sans-serif;
   color: #000;
+}
+
+::selection {
+  background-color: var(--yellow);
 }
 
 a,
@@ -112,6 +116,7 @@ button {
     height: 12px;
     background-color: var(--line);
     z-index: -1;
+    transition: 0.5s;
   }
 }
 
@@ -161,7 +166,6 @@ button {
   position: relative;
   width: fit-content;
   transition: 0.1s;
-  color: #000;
 
   &::after {
     content: "";
@@ -192,4 +196,22 @@ button {
 .title {
   font-size: 64px;
   font-weight: 800;
+}
+
+.fixed-menu.active {
+  background-color: rgba(255, 255, 255, 0.926);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.anchor-spacer {
+  padding-top: 100px;
+  margin-top: -100px;
 }
