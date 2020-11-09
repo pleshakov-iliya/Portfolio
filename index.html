@@ -46,8 +46,7 @@
         </div>
         <div class="header__bg"><img src="./img/header/header-bg.png" alt=""></div>
         <div class="container">
-         <div class="header__center-top">
-             <div class="anchor-spacer"  id="skills"></div>
+         <div class="header__center-top" id="skills">
              <div class="header__skills">
                 <div class="header__title"><h3>Что я умею:</h3></div>
                 <ul>
@@ -79,13 +78,13 @@
        <div class="container">
            <h2 class="title bottom-line">Портфолио</h2>
            <div class="section-portfolio__nav">
-               <a href="#">Все работы</a>
-               <a href="#">Bootstrap</a>
-               <a href="#">WordPress</a>
-               <a href="#">Frontend</a>
+               <button class="control-active" data-filter="all">Все работы</button>
+               <button data-filter=".boots">Bootstrap</button>
+               <button data-filter=".wp">WordPress</button>
+               <button data-filter=".frontend">Frontend</button>
            </div>
-           <div class="card-wrapper">
-           <div class="card card-big ">
+           <div class="card-wrapper" id="cards">
+           <div class="card card-big mix wp">
               <div class="card__img"><img src="./img/portfolio/Travel.jpg" alt="Travel">
                 <a href href="#" class="card__button-big button">Смотреть проект</a>
               </div>
@@ -93,7 +92,7 @@
               <div class="card__title"><h4>Верстка “Форест тревел”</h4></div>
               <p class="card__subtitle">Верстка многостраничного сайта.</p></a>
             </div>
-            <div class="card card-big ">
+            <div class="card card-big mix wp boots">
                 <div class="card__img">
                     <img src="./img/portfolio/Dream.jpg" alt="Dream">
                     <a href="#" class="card__button-big button">Смотреть проект</a>
@@ -101,21 +100,21 @@
                 <h4 class="card__title">Сайт для коворкинга “Мечта”</h4>
                 <p class="card__subtitle">Верстка лендинга.</p>  
             </div>
-            <div class="card card-small">
+            <div class="card card-small mix boots frontend">
                 <div class="card__img"><img src="./img/portfolio/auto1.jpg" alt="Auto-world1">
                     <a href="#" class="card__button-small button">Смотреть проект</a>
                 </div>
               <h4 class="card__title">Верстка “Мир Авто”</h4>
               <p class="card__subtitle">Верстка многостраничного сайта.</p> 
             </div>
-            <div class="card card-small">
+            <div class="card card-small mix boots">
                 <div class="card__img"><img src="./img/portfolio/auto2.jpg" alt="Auto-world2">
                     <a href="#" class="card__button-small button">Смотреть проект</a>
                 </div>
               <h4 class="card__title">Верстка “Мир Авто”</h4>
               <p class="card__subtitle">Верстка многостраничного сайта.</p> 
             </div>
-            <div class="card card-small">
+            <div class="card card-small mix wp">
                 <div class="card__img"><img src="./img/portfolio/auto3.jpg" alt="Auto-world3">
                     <a href="#" class="card__button-small button">Смотреть проект</a>
                 </div>
@@ -179,6 +178,7 @@
      <!-- //SECTION TIMELINE  -->
      <!-- SECTION CONTACTS -->
      <section class="section-contacts">
+        <div class="section-contacts-bg">
          <div class="container">
             <div class="anchor-spacer" id="contacts" ></div>
             <div class="section-contacts__bg"><img class="section-contacts__bg-img" src="./img/contacts/contacts-bg.png" alt="dots"></div>
@@ -193,14 +193,10 @@
                     </div>
                     <div class="section-contacts__info-contacts">
                         <ul>
-                            <li>Email</li>
-                            <li><a href="#">random@gmail.com</a></li>
-                            <li>Skype</li>
-                            <li><a href="">random.skype</a></li>
-                            <li>Телефон</li>
-                            <li>+7 (980) 123-45-67</li>
-                            <li>Адрес</li>
-                            <li>Россия, Санкт-Петербург</li>
+                            <li><span>Email</span><a href="#">random@gmail.com</a></li>
+                            <li><span>Skype</span><a href="">random.skype</a></li>
+                            <li><span>Телефон</span><p>+7 (980) 123-45-67</p></li>
+                            <li><span>Адрес</span><p>Россия, Санкт-Петербург</p></li>
                         </ul>
                     </div>
                     <div class="section-contacts__info-icons">
@@ -228,19 +224,21 @@
               </div>
             </div>
          </div>
+        </div>
      </section>
       <!-- //SECTION CONTACTS -->
     </main>
     <!-- FOOTER -->
     <footer class="main-footer">
         <div class="container">
-            <div class="main-footer__copyright"><h5>&#169; 2020 &#8212; Илья Плешаков</h5></div>
+            <div class="main-footer__copyright"><span>&#169; 2020 &#8212; Илья Плешаков</span></div>
             <div class="main-footer__desc"><p>Веб-разработчик из Санкт-Петербурга, занимаюсь версткой и созданием сайтов.<br> Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a href="https://webcademy.ru/" target="_blank">WebCademy.ru</a></p></div>
         </div>
     </footer>
     <!-- //FOOTER -->
 
     <script src="./libs/jquery.validate/jquery.validate.js"></script>
+    <script src="./libs/mixitup3/mixitup.min.js"></script>
     <script src="./js/main.js"></script>
 
 </body>

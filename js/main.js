@@ -3,7 +3,7 @@
 const fixMenu = document.querySelector('.fixed-menu');
 
 window.addEventListener('scroll', function(){
-    if(this.pageYOffset > 10){
+    if(this.pageYOffset > 40){
         fixMenu.classList.add('active');
     }
     else{
@@ -28,3 +28,15 @@ for (let item of formInputs) {
         }
     })
 }
+
+
+//Фильтрация проектов
+
+let containerEl = document.querySelector('#cards');
+let mixer = mixitup(containerEl, {
+    classNames: {
+        block: ""
+    }
+})
+
+

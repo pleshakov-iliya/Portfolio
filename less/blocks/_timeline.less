@@ -13,7 +13,7 @@
   align-items: center;
 
   &:not(:last-child) {
-    margin-bottom: 80px;
+    margin-bottom: 85px;
   }
 
   &:nth-child(even) {
@@ -28,9 +28,6 @@
     margin-left: auto;
   }
 
-  &:nth-child(odd) .timeline__item-desc {
-    margin-right: 20px;
-  }
 
   &:nth-child(even) .timeline__item-desc {
     margin-right: -20px;
@@ -39,8 +36,8 @@
   &:first-child .timeline__item-icon::before {
     content: "";
     position: absolute;
-    top: -100%;
-    left: 46%;
+    top: -105%;
+    left: 42%;
     width: 4px;
     height: 57px;
     background-color: #e1eef4;
@@ -50,8 +47,8 @@
   &:not(:last-child) .timeline__item-icon::after {
     content: "";
     position: absolute;
-    top: 127%;
-    left: 46%;
+    top: 123%;
+    left: 43%;
     width: 4px;
     height: 110px;
     background-color: #e1eef4;
@@ -61,7 +58,7 @@
 
 .timeline__item-icon {
   position: absolute;
-  top: -9%;
+  top: -12%;
   right: 45%;
   width: 74px;
   height: 74px;
@@ -78,7 +75,7 @@
 }
 
 .timeline__item-desc {
-  max-width: 420px;
+  max-width: 440px;
   height: 140px;
 
   cursor: pointer;
@@ -89,8 +86,11 @@
 }
 
 .timeline__item-desc-title {
+  margin-bottom: 5px;
+
   font-size: 26px;
   font-weight: 800;
+  z-index: 1;
 }
 
 .timeline__item-desc-text {

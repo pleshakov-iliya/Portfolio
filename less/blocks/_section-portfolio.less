@@ -1,6 +1,6 @@
 .section-portfolio {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 127px;
 
   background-color: #f4f8f9;
   z-index: -2;
@@ -11,39 +11,39 @@
 
   .title {
     z-index: 1;
-    margin-bottom: 60px;
+    margin-bottom: 47px;
+    margin-left: 7px;
   }
 }
 
 .section-portfolio__nav {
-  margin-bottom: 50px;
+  padding-left: 7px;
+  margin-bottom: 45px;
   display: flex;
 
-  a {
+  button {
+    font-family: "MPLUS 1p", sans-serif;
     font-size: 28px;
     font-weight: 800;
     color: #8fa5ae;
     transition: 0.3s;
   }
 
-  a:not(:first-child) {
-    font-weight: 900;
+  button:not(:last-child) {
+    margin-right: 81px;
   }
 
-  a:not(:last-child) {
-    margin-right: 84px;
-  }
-
-  a:hover {
+  button:hover {
     color: var(--red);
   }
-  a:active,
-  a:focus {
+  button:active,
+  button:focus {
     color: #000;
   }
 }
 
 .card-wrapper {
+  padding-left: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
