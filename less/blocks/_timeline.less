@@ -1,65 +1,134 @@
 .timeline {
-  width: 1005px;
+  width: 290px;
 
   .bottom-line::after {
-    bottom: 4px;
-    height: 7px;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 708px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1005px;
+
+    .bottom-line::after {
+      display: block;
+      bottom: 4px;
+      height: 7px;
+    }
   }
 }
 
 .timeline__item {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
 
   &:not(:last-child) {
-    margin-bottom: 85px;
-  }
-
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
-  &:nth-child(odd) {
-    text-align: right;
-  }
-
-  &:nth-child(odd) .timeline__item-desc-title {
-    margin-left: auto;
-  }
-
-
-  &:nth-child(even) .timeline__item-desc {
-    margin-right: -20px;
-  }
-
-  &:first-child .timeline__item-icon::before {
-    content: "";
-    position: absolute;
-    top: -105%;
-    left: 42%;
-    width: 4px;
-    height: 57px;
-    background-color: #e1eef4;
-    border-radius: 2px;
+    margin-bottom: 50px;
   }
 
   &:not(:last-child) .timeline__item-icon::after {
     content: "";
     position: absolute;
     top: 123%;
-    left: 43%;
+    left: 47%;
     width: 4px;
-    height: 110px;
+    height: 155px;
     background-color: #e1eef4;
     border-radius: 2px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+
+    &:nth-child(odd) .timeline__item-desc {
+      padding-right: 17px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(odd) {
+      text-align: right;
+    }
+
+    &:nth-child(odd) .timeline__item-desc-title {
+      margin-left: auto;
+    }
+
+    &:nth-child(even) .timeline__item-desc {
+      margin-right: -20px;
+    }
+
+    &:not(:last-child) .timeline__item-icon::after {
+      content: "";
+      position: absolute;
+      top: 123%;
+      left: 43%;
+      width: 4px;
+      height: 129px;
+      background-color: #e1eef4;
+      border-radius: 2px;
+    }
+
+    &:first-child .timeline__item-icon::before {
+      content: "";
+      position: absolute;
+      top: -105%;
+      left: 42%;
+      width: 4px;
+      height: 57px;
+      background-color: #e1eef4;
+      border-radius: 2px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 85px;
+    }
+
+    &:nth-child(odd) .timeline__item-desc {
+      padding-right: 0;
+    }
+
+    &:not(:last-child) .timeline__item-icon::after {
+      content: "";
+      position: absolute;
+      top: 123%;
+      left: 43%;
+      width: 4px;
+      height: 110px;
+      background-color: #e1eef4;
+      border-radius: 2px;
+    }
+
+    &:first-child .timeline__item-icon::before {
+      content: "";
+      position: absolute;
+      top: -105%;
+      left: 42%;
+      width: 4px;
+      height: 57px;
+      background-color: #e1eef4;
+      border-radius: 2px;
+    }
   }
 }
 
 .timeline__item-icon {
   position: absolute;
-  top: -12%;
-  right: 45%;
+  top: 5%;
+  left: 0;
   width: 74px;
   height: 74px;
 
@@ -72,30 +141,70 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @media (min-width: 768px) {
+    top: -12%;
+    left: unset;
+    right: 45%;
+  }
+
+  @media (min-width: 1200px) {
+  }
 }
 
 .timeline__item-desc {
-  max-width: 440px;
-  height: 140px;
+  margin-left: 113px;
+
+  max-width: 195px;
+  height: 210px;
 
   cursor: pointer;
 
   &:hover .timeline__item-desc-title::after {
     background-color: var(--red);
   }
+
+  @media (min-width: 768px) {
+    margin-left: 0;
+    max-width: 290px;
+    height: 215px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 440px;
+    height: 140px;
+  }
 }
 
 .timeline__item-desc-title {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 800;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 5px;
+
+    font-size: 26px;
+  }
 }
 
 .timeline__item-desc-text {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
 .timeline__item-desc-time {

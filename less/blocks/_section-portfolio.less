@@ -1,50 +1,130 @@
 .section-portfolio {
-  padding-top: 96px;
-  padding-bottom: 127px;
+  padding-top: 60px;
+  padding-bottom: 95px;
 
   background-color: #f4f8f9;
   z-index: -2;
 
   .bottom-line::after {
-    bottom: 18px;
+    bottom: 11px;
   }
 
   .title {
     z-index: 1;
-    margin-bottom: 47px;
-    margin-left: 7px;
+    margin-bottom: 35px;
+
+    font-size: 42px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .bottom-line::after {
+      bottom: 16px;
+    }
+
+    .title {
+      margin-bottom: 47px;
+      margin-left: 7px;
+
+      font-size: 52px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 96px;
+    padding-bottom: 127px;
+
+    .bottom-line::after {
+      bottom: 18px;
+    }
+
+    .title {
+      margin-bottom: 47px;
+      margin-left: 7px;
+
+      font-size: 62px;
+    }
   }
 }
 
 .section-portfolio__nav {
-  padding-left: 7px;
-  margin-bottom: 45px;
-  display: flex;
+  display: none;
 
-  button {
-    font-family: "MPLUS 1p", sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    color: #8fa5ae;
-    transition: 0.3s;
+  @media (min-width: 768px) {
+    display: block;
+    padding-left: 7px;
+    margin-bottom: 45px;
+    display: flex;
+
+    button {
+      font-family: "MPLUS 1p", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #8fa5ae;
+    }
+
+    button:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    button:hover {
+      color: var(--red);
+    }
+    button:active,
+    button:focus {
+      color: #000;
+    }
   }
 
-  button:not(:last-child) {
-    margin-right: 81px;
-  }
+  @media (min-width: 1200px) {
+    button {
+      font-size: 28px;
+    }
 
-  button:hover {
-    color: var(--red);
-  }
-  button:active,
-  button:focus {
-    color: #000;
+    button:not(:last-child) {
+      margin-right: 81px;
+    }
   }
 }
 
 .card-wrapper {
-  padding-left: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 7px;
+  }
+}
+
+.section-portfolio__button {
+  margin-top: 45px;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  a {
+    color: #44aae9;
+    border-bottom: 1px solid #44aae9;
+    transition: 0.2s;
+  }
+
+  a:hover,
+  a:active {
+    color: #f3adaa;
+    border-color: #f3adaa;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
 }

@@ -85,9 +85,9 @@ button {
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
+  // @media (min-width: 576px) {
+  //   max-width: 540px;
+  // }
 
   @media (min-width: 768px) {
     max-width: 738px;
@@ -210,13 +210,18 @@ button {
 }
 
 .fixed-menu {
-  padding-top: 59px;
-  padding-bottom: 59px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 59px;
+    padding-bottom: 59px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
 }
 
 .anchor-spacer {
